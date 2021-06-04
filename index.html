@@ -43,23 +43,14 @@
 
     <!-- [ HEADER ] -->
     <header>
-        <!-- <a class="ctrl save">
-            <svg class="icon">
-                <use xlink:href="/img/imgs.svg#check"></use>
-            </svg>
-        </a>
-        <a class="ctrl add">
-            <svg class="icon">
-                <use xlink:href="/img/imgs.svg#add"></use>
-            </svg>
-        </a> -->
+
     </header>
 
 
     <!-- [ MAIN ] -->
     <h1>PC Builds.</h1>
 
-    <!-- [ section: build examples] -->
+    <!-- [ section: build examples ] -->
     <h2>Build examples:</h2>
     <section class="examples">
 
@@ -98,29 +89,62 @@
 
     </section>   
     
+
+    <!-- [ section: my builds ] -->
+    <h2>My builds:</h2>
+    <section class="examples my-builds">
+
+        <!-- card -->
+        <div class="card">
+            <div class="card__type">
+                <h3>Low-cost</h3>
+            </div>
+            <ul class="card__items low-cost" data-card-type = 'low-cost'>
+            </ul>
+        </div>
+
+        <!-- card -->
+        <div class="card">
+            <div class="card__type">
+                <h3>Mid-cost</h3>
+            </div>
+            <ul class="card__items mid-cost" data-card-type = 'mid-cost'>
+            </ul>
+        </div>
+
+        <!-- card -->
+        <div class="card">
+            <div class="card__type">
+                <h3>High-cost</h3>
+            </div>
+            <ul class="card__items high-cost" data-card-type = 'high-cost'>
+            </ul>
+        </div>
+
+    </section> 
     
-    <!-- [ section: build examples] -->
+    <!-- [ section: build examples ] -->
     <h2>Add component:</h2>
     <section class="components">
 
         <form action="">
             <label for="name">Name:</label>
-            <input type="text" id = 'name' name = 'name' placeholder = 'Component name ...' />
+            <input type="text" id = 'name' name = 'name' placeholder = 'Component name ...' required />
 
             <label for="category">Category:</label>
-            <select name="category" id="category">
-                <option value="1">Low-cost</option>
-                <option value="2">Mid-cost</option>
-                <option value="3">High-cost</option>
+            <select name="category" id="category" required>
+                <option value="low-cost">Low-cost</option>
+                <option value="mid-cost">Mid-cost</option>
+                <option value="high-cost">High-cost</option>
             </select>
 
             <label for="amount">Amount:</label>
-            <input type="text" id = 'amount' name = 'amount' placeholder = 'Amount of components ...' />
+            <input type="text" id = 'amount' name = 'amount' placeholder = 'Amount of components ...' required />
 
             <label for="priority">Priority:</label>
-            <input type="number" id = 'priority' name = 'priority' placeholder = 'Priority of a component ...' />
+            <input type="number" id = 'priority' name = 'priority' placeholder = 'Priority of a component ...' required />
             
-            <button>SAVE</button>
+            <button class = 'save'>SAVE</button>
         </form>
 
     </section> 

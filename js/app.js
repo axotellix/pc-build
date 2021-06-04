@@ -1,56 +1,70 @@
 
 // [ PRESETS ]
-let table       = document.querySelector('.spreadsheet');
-let edited_recs = [];
-let new_recs    = [];
-let empty_id    = 1;
-const add  = document.querySelector('.add');
-const save = document.querySelector('.save');
+const lows  = document.querySelector('.low-cost');
+const mids  = document.querySelector('.mid-cost');
+const highs = document.querySelector('.high-cost');
+
+const form  = document.querySelector('form');
+
+const dels  = document.querySelectorAll('.delete');
+const save  = document.querySelector('.save');
 
 
 // [ MAIN ]
 
 // render > all records
-db.collection('posts').orderBy('id').onSnapshot(snapshot => {
+
+db.collection('low-cost').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     
     changes.forEach(change => {
         if( change.type == 'added' ) {
-            render(change.doc);
+            render(lows, change.doc);
         } else if( change.type == 'removed' ) {
-            let removed = table.querySelector('[data-id=' + change.doc.id + ']');
-            table.removeChild(removed);
+            let removed = lows.querySelector('[data-id=' + change.doc.id + ']');
+            lows.removeChild(removed);
         }
     });
-
-    let cells = table.querySelectorAll('.cell');
-    for( let i = 0 ; i < cells.length ; i++ ) {
-
-        // make > cell editable
-        cells[i].addEventListener('click', () => {
-            addRec(cells[i]);
-        });
-        // keep > cell previous value
-        cells[i].addEventListener('focus', () => {
-            setRec(cells[i]);
-        });
-        // check > if value was changed
-        cells[i].addEventListener('blur', () => {
-            regChange(cells[i], cells[i].parentNode.getAttribute('data-id'));
-        });
-
-    }
-        
+});
+db.collection('mid-cost').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    
+    changes.forEach(change => {
+        if( change.type == 'added' ) {
+            render(mids, change.doc);
+        } else if( change.type == 'removed' ) {
+            let removed = mids.querySelector('[data-id=' + change.doc.id + ']');
+            mids.removeChild(removed);
+        }
+    });
+});
+db.collection('high-cost').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    
+    changes.forEach(change => {
+        if( change.type == 'added' ) {
+            render(highs, change.doc);
+        } else if( change.type == 'removed' ) {
+            let removed = highs.querySelector('[data-id=' + change.doc.id + ']');
+            highs.removeChild(removed);
+        }
+    });
 });
 
-// add > new record
-add.addEventListener('click', () => {
-    renderEmpty();
+// save > record
+save.addEventListener('click', e => {
+    e.preventDefault();
+    saveRec();
 });
 
-// save > changes
-save.addEventListener('click', () => {
-    saveChanges();
+// delete > record
+Object.keys(dels).forEach(del => {
+    console.log(del);
+    del.addEventListener('click', e => {
+        let collection = e.target.parentNode.parentNode.getAttribute('data-card-type')
+        let rec_id = e.target.parentNode.getAttribute('data-id');
+        delRec( collection, rec_id );
+    });
 });
 
 

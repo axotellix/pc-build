@@ -588,6 +588,7 @@ h3 {
   margin: 0 auto;
 }
 .card__item {
+  position: relative;
   display: block;
   margin-bottom: 10px;
   padding: 10px;
@@ -595,6 +596,35 @@ h3 {
   color: #EAE2B7;
   font-size: 1.5rem;
   border-radius: 5px;
+}
+.card .delete {
+  background: #D62828;
+  width: 0;
+  height: 0;
+  padding: 10px;
+  border-radius: 20px;
+  color: #f0f4f2;
+  line-height: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateX(0) translateY(-50%);
+          transform: translateX(0) translateY(-50%);
+}
+.card .delete:hover {
+  background: #db3d3d;
 }
 
 form {
