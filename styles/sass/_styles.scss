@@ -17,7 +17,23 @@ header {
     margin: 30px auto;
     margin-bottom: 50px;
     border-radius: 7px;
+    @include flex-align;
 
+    a {
+        max-width: 180px;
+        flex: 1 0 100px;
+        background: darken($blue, 2%);
+        padding: 8px;
+        margin: 20px;
+        color: $sand;
+        font-size: 1.5rem;
+        text-align: center;
+        border-radius: 7px;
+
+        &:hover {
+            background: darken($blue, 5%);
+        }
+    }
 }
 
 
