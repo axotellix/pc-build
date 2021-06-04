@@ -8,7 +8,7 @@ function render( card , doc ) {
     let del  = document.createElement('span');   //: delete button
 
     // set > elements
-    li.setAttribute('data-id', doc.id);
+    li.setAttribute('data-id', + doc.id);
     li.classList.add('card__item');
     del.classList.add('delete');
 
@@ -20,6 +20,13 @@ function render( card , doc ) {
     li.appendChild(cont);
     li.appendChild(del);
     card.appendChild(li);
+
+    // delete > record
+    del.addEventListener('click', e => {
+        let collection = e.target.parentNode.parentNode.getAttribute('data-card-type')
+        let rec_id = e.target.parentNode.getAttribute('data-id');
+        delRec( collection, rec_id );
+    });
 
 }
 
@@ -52,8 +59,7 @@ function saveRec() {
 
 //@ delete > record
 function delRec( collection , record_id ) {
-    console.log(collection , record_id);
-    db.collection(collection).doc(record_id).delete();
+    db.collection(collection).doc('' + record_id).delete();
 }
 
 //@ show > message
