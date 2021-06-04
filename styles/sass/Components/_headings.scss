@@ -1,0 +1,26 @@
+
+// [ headings ]
+h1 { 
+    width: $w;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-family: $f-body;
+    font-size: 3rem;
+    font-weight: $f-bold;
+    color: $sand;
+}
+
+h2 {
+    width: $w; 
+    margin: 0 auto;
+    margin-bottom: 15px;
+    color: $sand;
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: $f-bold;
+    color: $sand;
+}

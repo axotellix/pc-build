@@ -1,0 +1,33 @@
+
+// [ card ]
+.card {
+    max-width: 550px; min-width: 300px;
+    min-height: 200px;
+    margin: 15px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background: lighten($blue, 5%);
+    overflow: hidden;
+
+    &__type {
+        height: 100px;
+        margin-bottom: 20px;
+        background: $orange;
+        @include flex-align;
+    }
+
+    &__items {
+        width: calc(100% - 30px);
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: block;
+        margin-bottom: 10px;
+        padding: 10px;
+        background: $blue;
+        color: $sand;
+        font-size: 1.5rem;
+        border-radius: 5px;
+    }
+}

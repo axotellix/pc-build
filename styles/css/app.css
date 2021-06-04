@@ -413,18 +413,6 @@
   background: transparent;
 }
 
-html {
-  font: 10px "Montserrat", sans-serif;
-  font-weight: 400;
-}
-
-body {
-  background: #003049;
-  color: #f0f4f2;
-  font-smooth: antialiased;
-  -webkit-font-smoothing: antialiased;
-}
-
 .msg {
   min-width: 200px;
   padding: 20px;
@@ -543,4 +531,112 @@ body {
             transform: translateX(-40px);
     opacity: 0;
   }
+}
+h1 {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #EAE2B7;
+}
+
+h2 {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  color: #EAE2B7;
+}
+
+h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #EAE2B7;
+}
+
+.card {
+  max-width: 550px;
+  min-width: 300px;
+  min-height: 200px;
+  margin: 15px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background: #004163;
+  overflow: hidden;
+}
+.card__type {
+  height: 100px;
+  margin-bottom: 20px;
+  background: #F77F00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card__items {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+}
+.card__item {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #003049;
+  color: #EAE2B7;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+html {
+  font: 10px "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background: #003049;
+  color: #f0f4f2;
+  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  width: 90%;
+  height: 50px;
+  background: #00527c;
+  margin: 30px auto;
+  margin-bottom: 50px;
+  border-radius: 7px;
+}
+
+section {
+  width: 90%;
+  margin: 50px auto;
+  margin-top: 0;
+  padding: 50px;
+  border-radius: 10px;
+  background: #001f30;
+}
+
+section.examples {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }

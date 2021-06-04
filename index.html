@@ -57,8 +57,71 @@
 
 
     <!-- [ MAIN ] -->
-    <h1>Posts</h1>
+    <h1>PC Builds.</h1>
 
+    <!-- [ section: build examples] -->
+    <h2>Build examples:</h2>
+    <section class="examples">
+
+        <!-- card -->
+        <div class="card">
+            <div class="card__type">
+                <h3>Low-cost</h3>
+            </div>
+            <ul class="card__items">
+                <li class="card__item">motherboard 1</li>
+                <li class="card__item">HDD 1</li>
+            </ul>
+        </div>
+
+        <!-- card -->
+        <div class="card">
+            <div class="card__type">
+                <h3>Mid-cost</h3>
+            </div>
+            <ul class="card__items">
+                <li class="card__item">motherboard 1</li>
+                <li class="card__item">HDD 1</li>
+            </ul>
+        </div>
+
+        <!-- card -->
+        <div class="card">
+            <div class="card__type">
+                <h3>High-cost</h3>
+            </div>
+            <ul class="card__items">
+                <li class="card__item">motherboard 1</li>
+                <li class="card__item">HDD 1</li>
+            </ul>
+        </div>
+
+    </section>   
+    
+    
+    <!-- [ section: build examples] -->
+    <h2>Add component:</h2>
+    <section class="components">
+
+        <form action="">
+            <label for="name">Name:</label>
+            <input type="text" id = 'name' name = 'name' placeholder = 'Component name ...' />
+
+            <label for="category">Category:</label>
+            <select name="category" id="category">
+                <option value="1">Low-cost</option>
+                <option value="2">Mid-cost</option>
+                <option value="3">High-cost</option>
+            </select>
+
+            <label for="amount">Amount:</label>
+            <input type="text" id = 'amount' name = 'amount' placeholder = 'Amount of components ...' />
+
+            <label for="priority">Priority:</label>
+            <input type="number" id = 'priority' name = 'priority' placeholder = 'Priority of a component ...' />
+        </form>
+
+    </section> 
     
 
     <!-- [ FIRESTORE PRESETS ] -->
