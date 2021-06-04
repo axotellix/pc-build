@@ -59,7 +59,7 @@ function saveRec() {
 
 //@ delete > record
 function delRec( collection , record_id ) {
-    db.collection(collection).doc('' + record_id).delete();
+    db.collection(collection).doc('' + record_id).delete().then( msg('delete') );
 }
 
 //@ show > message
@@ -72,6 +72,16 @@ function msg( type ) {
 
         setTimeout(() => {
             document.querySelector('.msg .success').classList.remove('active');
+            document.querySelector('.msg').classList.remove('show');
+        }, 3000);
+    }
+    //: success message 
+    if( type == 'delete' ) {
+        document.querySelector('.msg .delete').classList.add('active');
+        document.querySelector('.msg').classList.add('show');
+
+        setTimeout(() => {
+            document.querySelector('.msg .delete').classList.remove('active');
             document.querySelector('.msg').classList.remove('show');
         }, 3000);
     }
