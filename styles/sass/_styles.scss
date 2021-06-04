@@ -1,0 +1,70 @@
+
+// [ GENERAL ]
+html { font: $font; font-weight: $f-normal; }
+body {
+    background: $blue;
+    color: $white;
+    font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+// [ MAIN ]
+
+// [ aside ]
+.msg { 
+    min-width: 200px; padding: 20px;
+    background: #fff;
+    border-radius: 6px;
+    @include box-shadow('lite');
+    @include align(left, bottom, fixed, 50px, 50px);
+    opacity: 0;
+    transform: translateX(-40px);
+
+    &.show { 
+        animation: show-msg 0.25s ease-in forwards,
+                   hide-msg 0.25s 2.5s ease-out forwards; 
+    }
+    &.hide { 
+        animation: hide-msg 0.25s ease-in forwards,
+                   show-msg 0.25s 2.5s ease-out forwards; 
+    }
+    
+    svg {
+        fill: #fff; 
+        width: 20px; height: 20px; 
+        margin-right: 17px;
+        padding: 5px;
+        border-radius: 25px;
+        box-sizing: content-box !important;
+    }
+    span {
+        color: lighten($dark, 30%);
+        font-size: 2rem;
+        font-weight: $f-bold;
+    }
+}
+.msg-type {
+    @include flex-align;
+    display: none;
+
+    &.active { display: flex }
+}
+.msg .success {
+    svg { 
+        background: $green;
+    }
+}
+.msg .failure {
+    svg { 
+        background: $red;
+    }
+}
+
+@keyframes show-msg {
+    from { transform: translateX(-40px); opacity: 0 }
+    to   { transform: translateX(0); opacity: 1     }
+}
+@keyframes hide-msg {
+    from { transform: translateX(0); opacity: 1     }
+    to   { transform: translateX(-40px); opacity: 0 }
+}

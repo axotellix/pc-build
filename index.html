@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- [ STYLES ] -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/css/app.css">
+    
+    <!-- [ SCRIPTS ] -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+    <script src = '/js/extensions/functions.js' defer></script>
+    <script src = '/js/app.js' defer></script>
+
+    <title>PC Build</title>
+</head>
+<body>
+    
+    <!-- [ MESSAGE BOX ] -->
+    <div class="msg">
+
+        <!-- [ success msg ] -->
+        <div class="msg-type success">
+            <svg class="icon">
+                <use xlink:href="/img/imgs.svg#check"></use>
+            </svg>
+            <span>successfully recorded</span>
+        </div>
+
+        <!-- [ failure msg ] -->
+        <div class="msg-type failure">
+            <svg class="icon">
+                <use xlink:href="/img/imgs.svg#cross"></use>
+            </svg>
+            <span>error occured</span>
+        </div>
+
+    </div>
+
+    <!-- [ HEADER ] -->
+    <header>
+        <!-- <a class="ctrl save">
+            <svg class="icon">
+                <use xlink:href="/img/imgs.svg#check"></use>
+            </svg>
+        </a>
+        <a class="ctrl add">
+            <svg class="icon">
+                <use xlink:href="/img/imgs.svg#add"></use>
+            </svg>
+        </a> -->
+    </header>
+
+
+    <!-- [ MAIN ] -->
+    <h1>Posts</h1>
+
+    
+
+    <!-- [ FIRESTORE PRESETS ] -->
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyDuTawbGzcIKxPC4PP0SuSQSNcXQ7M8f84",
+          authDomain: "trinity-x-music.firebaseapp.com",
+          projectId: "trinity-x-music",
+          storageBucket: "trinity-x-music.appspot.com",
+          messagingSenderId: "842299840231",
+          appId: "1:842299840231:web:9bff16ab11354abb20f442"
+        };
+
+        // init > Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        const db = firebase.firestore();
+        db.settings({ timestampsSnapshot: true });
+      </script>
+</body>
+</html>

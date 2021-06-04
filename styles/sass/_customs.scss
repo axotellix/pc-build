@@ -1,0 +1,160 @@
+
+// [ CUSTOMISING CLASSES ]
+
+// [ margins ]
+
+ // POSITIVE -----------------------
+  // TOP: 1-5
+.mt-1 { margin-top: 1px !important } 
+.mt-2 { margin-top: 2px !important } 
+.mt-3 { margin-top: 3px !important } 
+.mt-4 { margin-top: 4px !important } 
+.mt-5 { margin-top: 5px !important } 
+  // TOP: 10-50
+.mt-10 { margin-top: 10px !important } 
+.mt-20 { margin-top: 20px !important } 
+.mt-30 { margin-top: 30px !important } 
+.mt-40 { margin-top: 40px !important } 
+.mt-50 { margin-top: 50px !important } 
+
+  // LEFT: 1-5
+.ml-1 { margin-left: 1px !important } 
+.ml-2 { margin-left: 2px !important } 
+.ml-3 { margin-left: 3px !important } 
+.ml-4 { margin-left: 4px !important } 
+.ml-5 { margin-left: 5px !important } 
+  // LEFT: 10-50
+.ml-10 { margin-left: 10px !important } 
+.ml-20 { margin-left: 20px !important } 
+.ml-30 { margin-left: 30px !important } 
+.ml-40 { margin-left: 40px !important } 
+.ml-50 { margin-left: 50px !important } 
+ 
+ // RIGHT: 1-5
+.mr-1 { margin-right: 1px !important } 
+.mr-2 { margin-right: 2px !important } 
+.mr-3 { margin-right: 3px !important } 
+.mr-4 { margin-right: 4px !important } 
+.mr-5 { margin-right: 5px !important } 
+  // RIGHT: 10-50
+.mr-10 { margin-right: 10px !important } 
+.mr-20 { margin-right: 20px !important } 
+.mr-30 { margin-right: 30px !important } 
+.mr-40 { margin-right: 40px !important } 
+.mr-50 { margin-right: 50px !important } 
+ 
+ // BOTTOM: 1-5
+.mb-1 { margin-bottom: 1px !important } 
+.mb-2 { margin-bottom: 2px !important } 
+.mb-3 { margin-bottom: 3px !important } 
+.mb-4 { margin-bottom: 4px !important } 
+.mb-5 { margin-bottom: 5px !important } 
+  // BOTTOM: 10-50
+.mb-10 { margin-bottom: 10px !important } 
+.mb-20 { margin-bottom: 20px !important } 
+.mb-30 { margin-bottom: 30px !important } 
+.mb-40 { margin-bottom: 40px !important } 
+.mb-50 { margin-bottom: 50px !important } 
+
+ // NEGATIVE -----------------------
+
+  // TOP: 1-5
+.mt--1 { margin-top: -1px !important } 
+.mt--2 { margin-top: -2px !important } 
+.mt--3 { margin-top: -3px !important } 
+.mt--4 { margin-top: -4px !important } 
+.mt--5 { margin-top: -5px !important } 
+  // TOP: 10-50
+.mt--10 { margin-top: -10px !important } 
+.mt--20 { margin-top: -20px !important } 
+.mt--30 { margin-top: -30px !important } 
+.mt--40 { margin-top: -40px !important } 
+.mt--50 { margin-top: -50px !important } 
+
+  // LEFT: 1-5
+.ml--1 { margin-left: -1px !important } 
+.ml--2 { margin-left: -2px !important } 
+.ml--3 { margin-left: -3px !important } 
+.ml--4 { margin-left: -4px !important } 
+.ml--5 { margin-left: -5px !important } 
+  // LEFT: 10-50
+.ml--10 { margin-left: -10px !important } 
+.ml--20 { margin-left: -20px !important } 
+.ml--30 { margin-left: -30px !important } 
+.ml--40 { margin-left: -40px !important } 
+.ml--50 { margin-left: -50px !important } 
+ 
+ // RIGHT: 1-5
+.mr--1 { margin-right: -1px !important } 
+.mr--2 { margin-right: -2px !important } 
+.mr--3 { margin-right: -3px !important } 
+.mr--4 { margin-right: -4px !important } 
+.mr--5 { margin-right: -5px !important } 
+  // RIGHT: 10-50
+.mr--10 { margin-right: -10px !important } 
+.mr--20 { margin-right: -20px !important } 
+.mr--30 { margin-right: -30px !important } 
+.mr--40 { margin-right: -40px !important } 
+.mr--50 { margin-right: -50px !important } 
+ 
+ // BOTTOM: 1-5
+.mb--1 { margin-bottom: -1px !important } 
+.mb--2 { margin-bottom: -2px !important } 
+.mb--3 { margin-bottom: -3px !important } 
+.mb--4 { margin-bottom: -4px !important } 
+.mb--5 { margin-bottom: -5px !important } 
+  // BOTTOM: 10-50
+.mb--10 { margin-bottom: -10px !important } 
+.mb--20 { margin-bottom: -20px !important } 
+.mb--30 { margin-bottom: -30px !important } 
+.mb--40 { margin-bottom: -40px !important } 
+.mb--50 { margin-bottom: -50px !important } 
+
+
+// [ alignment ]
+.flex-col {
+    flex-direction: column !important;
+} 
+.flex-col-center-top {
+    flex-direction: column !important;
+    @include flex-align(flex-start, center);
+} 
+
+
+// [ sizing ]
+.ico-15 {
+  max-width: 15px !important;
+} 
+.ico-16 {
+  max-width: 16px !important;
+} 
+.ico-17 {
+  max-width: 17px !important;
+} 
+.ico-18 {
+  max-width: 18px !important;
+} 
+.ico-19 {
+  max-width: 18px !important;
+} 
+.ico-20 {
+  max-width: 20px !important;
+} 
+.ico-21 {
+  max-width: 20px !important;
+} 
+.ico-22 {
+  max-width: 22px !important;
+} 
+
+.widen-font {
+  transform: scaleX(1.2);     // crutch: to visually widen 'Syne' font with weight less than 600
+  transform-origin: left top;
+}
+
+
+// [ visibility ]
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
