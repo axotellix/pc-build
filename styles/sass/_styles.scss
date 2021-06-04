@@ -36,6 +36,15 @@ header {
     }
 }
 
+// [ footer ]
+footer {
+    height: 100px;
+    background: Orange;
+    color: $white;
+    font-size: 2rem;
+    @include flex-align;
+}
+
 
 // [ section ]
 section {
