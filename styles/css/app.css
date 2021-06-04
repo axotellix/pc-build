@@ -597,6 +597,83 @@ h3 {
   border-radius: 5px;
 }
 
+form {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+label {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: rgba(234, 226, 183, 0.6);
+  font-size: 1.3rem;
+}
+label:first-of-type {
+  margin-top: 0;
+}
+
+input, button, select {
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+  padding: 15px;
+  background: #004163;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  color: #EAE2B7;
+  border: none;
+  outline: none;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+}
+input:hover, button:hover, select:hover {
+  background: #00476d;
+}
+input:focus, button:focus, select:focus {
+  background: #006296;
+}
+input::-webkit-input-placeholder, button::-webkit-input-placeholder, select::-webkit-input-placeholder {
+  color: rgba(226, 245, 255, 0.4);
+}
+
+select {
+  background: #00527c;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+  padding: 10px;
+  background: #1eb658;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover {
+  background: #23d567;
+}
+button:active {
+  background: #1aa04d;
+}
+
 html {
   font: 10px "Montserrat", sans-serif;
   font-weight: 400;
