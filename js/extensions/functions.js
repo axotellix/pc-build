@@ -8,7 +8,7 @@ function render( card , doc ) {
     let del  = document.createElement('span');   //: delete button
 
     // set > elements
-    li.setAttribute('data-id', + doc.id);
+    li.setAttribute('data-id', doc.id);
     li.classList.add('card__item');
     del.classList.add('delete');
 
